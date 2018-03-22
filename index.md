@@ -134,7 +134,7 @@ There are a few libraries and demos available to make connecting to our API easi
 
 ## Handy tools
 
-*   [RequestBin](http://requestb.in/) for testing the postback.
+*   [Hookbin](https://hookbin.com) for testing the postback.
 *   [JSONLint](http://jsonlint.com/) for formatting and checking json messages.
 
 ## Posts
