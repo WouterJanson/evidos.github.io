@@ -267,6 +267,10 @@ definitions:
                 Available / valid if `SendSignRequest` is set to false.
               type: string
               readOnly: true
+            SignRequestSubject:
+              description: |
+                The subject of the sign request in plain text.
+              type: string
             SignRequestMessage:
               description: |
                 The message of the sign request in plain text.
