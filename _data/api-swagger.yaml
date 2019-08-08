@@ -305,6 +305,7 @@ definitions:
               description: |
                 Amount of days before reminding the signers. -1 to disable reminders.
                 Ignored if `SendSignRequest` is set to false.
+                By default your organisation's setting will be used.
               default: 7
               type: integer
             Expires:
