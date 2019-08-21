@@ -328,6 +328,9 @@ definitions:
               description: The url to redirect the user to after signing, rejecting or cancelling.
               default: https://signhost.com
               type: string
+            Context:
+              type: object
+              description: Any valid json object which we will return back to you when doing a GET on the transaction or when we send a postback.
             Activities:
               type: array
               readOnly: true
@@ -402,6 +405,9 @@ definitions:
             Reference:
               type: string
               description: The reference of the receiver.
+            Context:
+              type: object
+              description: Any valid json object which we will return back to you when doing a GET on the transaction or when we send a postback.
       Reference:
         type: string
         description: The reference of the transaction. For example "1234"
