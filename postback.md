@@ -8,9 +8,9 @@ The Signhost postback service is meant to provide realtime updates on your trans
 Please refrain from active polling with GET requests to stay up-to-date.
 If you cannot implement the postback service, or you have any questions regarding the service, please contact [support](mailto:support@evidos.nl).
 
-### Adviced postback implementation flow
+### Advised postback implementation flow
 
-To avoid postback queue's for your application, we advice the following flow once a postback arrives at your server:
+To avoid postback queues for your application, we advise the following flow once a postback arrives at your server:
   1. Perform checksum validation
       * Validate the body is valid JSON, if not move to step 2;
       * Validate the JSON has a Checksum property, if not move to step 2;
