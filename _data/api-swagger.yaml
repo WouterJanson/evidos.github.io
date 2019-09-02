@@ -324,6 +324,10 @@ definitions:
             Reference:
               description: The reference of the signer.
               type: string
+            RejectReason:
+              readOnly: true
+              description: The rejection reason that was given by the signer when the transaction was rejected.
+              type: string
             ReturnUrl:
               description: The url to redirect the user to after signing, rejecting or cancelling.
               default: https://signhost.com
