@@ -3,7 +3,7 @@ info:
   title: Signhost api
   description: Integrate with Signhost using our API to create transactions and retrieve current status.
   version: "1.0"
-  contact: 
+  contact:
     name: "support@signhost.com"
 host: api.signhost.com
 schemes:
@@ -55,8 +55,8 @@ paths:
         When a transaction is not in an end-state (such as fully signed) the transaction will be cancelled and cleaned.
         A cancelled transaction can be told to send an e-mail notification to the awaiting signers that the transaction was cancelled.
         The status of the transaction will be set to cancelled.
-        
-        When a transaction is in an end-state the transaction the transaction will be cleaned. 
+
+        When a transaction is in an end-state the transaction the transaction will be cleaned.
         The status of the transaction will remain the same but we will clean any uploaded documents and sensitive data as soon as possible.
       parameters:
         - name: transactionId
@@ -85,7 +85,7 @@ paths:
           description: The transaction could not be deleted.
           schema:
             $ref: '#/definitions/ErrorModel'
-            
+
   '/api/transaction/{transactionId}/file/{fileId}/':
     get:
       description: Returns the (signed) document(s).
@@ -111,7 +111,7 @@ paths:
     get:
       description: Returns the receipt when the transaction is successfully signed (Status=30)
       produces:
-      - 'application/pdf'          
+      - 'application/pdf'
       parameters:
         - name: transactionId
           description: ID of the description
@@ -190,6 +190,7 @@ paths:
             Conflict while trying to overwrite the file.
             You have used the same fileId again which causes us to overwrite the file (which is a valid action).
             However the same fileId was provided in a too short time interval making it unclear which version was meant to be the latest version.
+
   '/api/transaction/{transactionId}/start':
     put:
       description: Starts a transaction with the same {transactionId}
@@ -206,7 +207,7 @@ paths:
           description: The transaction could not be started. Most probably causes are that the created transactions contains errors causing the transaction to be in Failed status.
           schema:
             $ref: '#/definitions/ErrorModel'
-            
+
 definitions:
   Transaction:
     type: object
@@ -474,7 +475,7 @@ definitions:
           - Kennisnet
           - PhoneNumber
           - Scribble
-          - SigningCertificate 
+          - SigningCertificate
           - SURFnet
         description: |
           Type of the verification object.
@@ -516,7 +517,7 @@ definitions:
           description: |
             When provided, the provided value must match the BSN of the credentials returned by DigiD.
             The BSN is required to match an '11-proef'.
-    example: | 
+    example: |
       A DigiD verification response may have the following content:
       ```json
       {
@@ -604,7 +605,7 @@ definitions:
         AccountHolderCity:
           type: string
           readOnly: true
-    example: | 
+    example: |
       An iDeal verification response may have the following content:
       ```json
       {
@@ -645,7 +646,7 @@ definitions:
             description: |
               Contains all available iDIN attributes.
               These attributes may change, therefore we cannot guarantee the availability of any of these attributes.
-    example: | 
+    example: |
       An iDIN verification response may have the following content:
 
       ```json
@@ -829,11 +830,11 @@ definitions:
     allOf:
     - $ref: '#/definitions/Verification'
     - type: object
-  
+
   FileEntry:
     type: object
     properties:
-      Links: 
+      Links:
         type: array
         items:
           $ref: '#/definitions/Link'
@@ -844,7 +845,7 @@ definitions:
   Link:
     type: object
     properties:
-      Rel: 
+      Rel:
         type: string
         description: The type of file you can download.
         enum:
@@ -879,7 +880,7 @@ definitions:
       Signers:
         type: object
         description: |
-          Map of array of formsets. 
+          Map of array of formsets.
           Each key should be a valid signer id.
         additionalProperties:
           type: object
@@ -954,9 +955,9 @@ definitions:
                     type: integer
                     description: On which page the field should be placed.
     example: |
-      Simple example which performs a scan for the `{{Signer1}}` mustache tag 
+      Simple example which performs a scan for the `{{Signer1}}` mustache tag
       and creates a Signature fields named SignatureOne on the found location(s).
-      
+
       ```
         {
           "DisplayName": "Your personal contract",
@@ -983,7 +984,7 @@ definitions:
   ErrorModel:
     type: object
     properties:
-      Message: 
+      Message:
         type: string
         description: Message describing the error in the request.
-  
+
