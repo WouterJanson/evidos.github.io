@@ -249,6 +249,12 @@ definitions:
               description: |
                 An intro text to show to the user during the sign proces.
                 This will be shown on the first screen to the signer and supports limitted markdown markup.
+
+                The following markup is supported:
+                - `# Headings`
+                - `*Emphasis*` / `_Emphasis_`
+                - `**Stong**` / `__Strong__`
+                - `1. Ordered` and `- Unordered` lists
             Verifications:
               description: |
                 List of verifications that the signer has to verify with.
