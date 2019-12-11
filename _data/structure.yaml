@@ -1,0 +1,17 @@
+# Frontpage
+- name: Evidos
+  menu:
+  - title: About
+    permalink: /about/
+
+# Products
+- name: Signhost
+  menu:
+  - title: Basic Information
+    permalink: /signhost/
+  - title: Statuses & Activities
+    permalink: /signhost/status-activity/
+  - title: Postback
+    permalink: /signhost/postback/
+  - title: Endpoints & Model types
+    permalink: /signhost/endpoints/
