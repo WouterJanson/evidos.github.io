@@ -41,4 +41,5 @@ The integration of Evidos Forms makes use of the following components;
 
 The following sequence diagram shows an example of the process flow of the webform signing integration
 
-![Sequence diagram](images/sequence_diagram.png)
+**Evidos Forms Signhost integration**
+![Sequence diagram](images/sequence_diagram.svg)
