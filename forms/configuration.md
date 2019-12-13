@@ -5,13 +5,16 @@ permalink: forms/configuration/
 product: Forms
 ---
 
-Evidos forms has a native integration with [Evidos Signhost](/signhost) the signing API of Evidos. After the user filled all the information the signing transaction including the PDF(s) to be signed are created.
+Evidos forms has a native integration with [Evidos Signhost](/signhost) the signing API of Evidos.
+After the user filled all the information the signing transaction including the PDF(s) to be signed are created.
 
 ## Mapping formfields to sign API
 
-The creation of the PDF is based on a template. Within the project the PDF template is mapped to the formfields.
+The creation of the PDF is based on a template.
+Within the project, the PDF template is mapped to the formfields.
 
-The formfield are included in the postback/GET using the Context property, a valid json object containing the name and input of the formfield. This also includes hidden fields for additional background validations.
+The formfield are included in the postback/GET using the Context property, a valid json object containing the name and input of the formfield.
+This also includes hidden fields for additional background validations.
 
 See Evidos Signhost get for an example of the result. In the json the Context property could look like:
 ```json
@@ -25,11 +28,11 @@ See Evidos Signhost get for an example of the result. In the json the Context pr
 ## Defining the signing flow – Number of Signers
 At the end of the form it is possible to let the user define if he will be the authoritative signer and directly view and sign the document(s), or define the authoritative signer(s) by typing the name/ email.
 The customer needs to know or decide if the end user is allowed to sign directly and/or delegate to other signers.
-If other signers are defined the signing URL will be send by email to the other signers or the enduser is able to distribute the signing link himself.
+If other signers are defined the signing URL will be sent by email to the other signers or the enduser is able to distribute the signing link himself.
 
 ## Sign Parameters
 It is also required to define the additional parameters for Evidos Signhost.
-During the project these parameters will be defined with the customer.
+During the project, these parameters will be defined with the customer.
 A detailed overview of the parameters can be viewed in the Evidos Signhost API: [https://evidos.github.io/signhost/endpoints/##/definitions/Transaction](/signhost/endpoints/##/definitions/Transaction)
 
 ## Verificationmethods
@@ -41,9 +44,9 @@ When the customer system will use the Signhost API to retrieve the document(s) a
 For details on the postback mechanism see: [https://evidos.github.io/signhost/postback/](/signhost/postback)
 
 ## Return URL
-At the end of the signing the signers are send to a return URL.
+At the end of the signing, the signers are sent to a return URL.
 This can be a result page of the customer or a result page on Evidos forms.
-Within the Evidos forms it is possible to additionally start a payment process or any other trigger.
+Within the Evidos forms, it is possible to additionally start a payment process or any other trigger.
 
 ## Retrieving the result Postback/ Get
 For the webform a specific postback URL is configured.
@@ -63,7 +66,7 @@ Signed document(s):
 Transaction Receipt:
 [https://evidos.github.io/signhost/endpoints/##/paths//api/file/receipt/{transactionId}/get](/signhost/endpoints/##/paths//api/file/receipt/{transactionId}/get)
 
-**Note:** If no postback can be implemented it is possible to configure Evidos Forms to send the result by email or other secure distribution mechanism.
+**Note:** If no postback can be implemented it is possible to configure Evidos Forms to send the result by email or other secure distribution mechanisms.
 
 ## Delete a transaction
 Within Evidos Signhost a time is defined for the sign URL’s to be available.

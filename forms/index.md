@@ -6,8 +6,8 @@ product: Forms
 ---
 
 Evidos makes it possible to provide webforms to your customers to fill and sign transactions in one integrated flow.
-In this way you have a flexible solution to collect data in a smart way and generate the documents to be signed based on a template.
-In general it is not possible to fill any smart formfields during the Evidos Signhost signing process, Evidos Forms is a specialized module to offer this functionality.
+In this way, you have a flexible solution to collect data in a smart way and generate the documents to be signed based on a template.
+In general, it is not possible to fill any smart formfields during the Evidos Signhost signing process, Evidos Forms is a specialized module to offer this functionality.
 
 It is also possible to offer a prefilled form based on the data that you already have available in your own customer system.
 This makes it possible that the enduser is not required to fill all data all over again.
@@ -17,7 +17,7 @@ The following technical documentation describes the way how you can integrate yo
 ## Before you start
 All connections are done using JSON Rest webservices over an https connection;
 
-The architectural principal is to store a minimum of personal data for the shortest time as possible at the Evidos platform.
+The architectural principle is to store a minimum of personal data for the shortest time as possible at the Evidos platform.
 Only for the time needed to process the transaction;
 
 If the forms are prefilled with customer data, this data is not stored on the Evidos platform.
